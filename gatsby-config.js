@@ -3,5 +3,5 @@ module.exports = {
     siteUrl: "https://www.yourdomain.tld",
     title: "My Portfolio Website",
   },
-  plugins: [],
+  plugins: [`gatsby-plugin-smoothscroll`],
 };
