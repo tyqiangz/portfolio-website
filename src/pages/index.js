@@ -1,12 +1,25 @@
-import React from 'react'
-import Layout from "../components/Layout"
+import React from "react";
+
+import Layout from "../components/Layout";
+import Seo from "../components/Seo";
+// Components
+import Header from "../components/Header";
+import Work from "../components/Work";
+import About from "../components/About";
+import Skills from "../components/Skills";
+import Promotion from "../components/Promotion";
+import Footer from "../components/Footer";
 
 const IndexPage = () => (
-    <Layout>
-      <title>Home Page</title>
-      <h1>Welcome to my Portfolio site!</h1>
-      <p>I'm making this using Gatsby!</p>
-    </Layout>
-)
+  <Layout>
+    <Seo title="Portfolio Template" />
+    <Header></Header>
+    <Work></Work>
+    <About></About>
+    <Skills></Skills>
+    <Promotion></Promotion>
+    <Footer></Footer>
+  </Layout>
+);
 
-export default IndexPage
+export default IndexPage;
