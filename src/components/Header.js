@@ -41,9 +41,13 @@ const Header = () => {
           </Fade>
           <Fade bottom>
             <a
-              href={`mailto:${
-                data.contactEmail ? data.contactEmail : "hello@chetanverma.com"
-              }`}
+              href={
+                data.contactLink
+                  ? data.contactLink
+                  : "https://www.linkedin.com/in/yong-qiang-tay/"
+              }
+              target="_blank"
+              rel="noopener noreferrer"
               className="primary-btn"
             >
               CONNECT WITH ME

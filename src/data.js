@@ -5,13 +5,17 @@ import reactIcon from "./images/react.svg";
 import jsIcon from "./images/javascript.svg";
 import pythonIcon from "./images/python.svg";
 import pytorchIcon from "./images/pytorch.svg";
-import jupyterIcon from "./images/jupyter-notebook.svg"
-import sparkIcon from "./images/apache-spark.svg"
+import jupyterIcon from "./images/jupyter-notebook.svg";
+import sparkIcon from "./images/apache-spark.svg";
+import tableauIcon from "./images/tableau.svg";
+import latexIcon from "./images/latex.svg";
+
+import profilePic from "./images/picture-of-me.png";
 
 // Social Icon
 import githubIcon from "./images/github.svg";
-import codepenIcon from "./images/codepen.svg";
-import dribbbleIcon from "./images/dribbble.svg";
+import linkedinIcon from "./images/linkedin.svg";
+import mailIcon from "./images/mail.svg";
 import instagramIcon from "./images/instagram.svg";
 
 const mydata = {
@@ -32,8 +36,11 @@ const mydata = {
   headerParagraph:
     "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
 
-  //Contact Email
-  contactEmail: "hello@chetanverma.com",
+  // Contact Email
+  contactEmail: "tay.yongqiang@gmail.com",
+
+  // Contact Link
+  contactLink: "https://www.linkedin.com/in/yong-qiang-tay/",
 
   // End Header Details -----------------------
 
@@ -108,6 +115,9 @@ const mydata = {
   // End Work Section -----------------------
 
   // About Secton --------------
+  resumeLink: "https://www.overleaf.com/project/5faf5e6fe956f46d635f8eb4",
+  profilePicture: profilePic,
+
   aboutParaOne:
     "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
   aboutParaTwo:
@@ -127,22 +137,32 @@ const mydata = {
     {
       img: pythonIcon,
       name: "Python",
-      para: ""
+      para: "",
     },
     {
       img: jupyterIcon,
       name: "Jupyter",
-      para: ""
+      para: "",
     },
     {
       img: pytorchIcon,
       name: "PyTorch",
-      para: ""
+      para: "",
     },
     {
       img: sparkIcon,
       name: "Apache Spark",
-      para: ""
+      para: "",
+    },
+    {
+      img: tableauIcon,
+      name: "Tableau",
+      para: "",
+    },
+    {
+      img: latexIcon,
+      name: "LaTeX",
+      para: "",
     },
     {
       img: htmlIcon,
@@ -180,14 +200,14 @@ const mydata = {
   contactSubHeading: "Let's create your next experience together",
   social: [
     // Add Or Remove The Link Accordingly
-    { img: githubIcon, url: "https://github.com/chetanverma16" },
+    { img: githubIcon, url: "https://github.com/tyqiangz" },
     {
-      img: codepenIcon,
-      url: "https://www.codepen.com/",
+      img: linkedinIcon,
+      url: "https://www.linkedin.com/in/yong-qiang-tay/",
     },
     {
-      img: dribbbleIcon,
-      url: "https://dribbble.com/chetanverma",
+      img: mailIcon,
+      url: `mailto:tay.yongqiang@gmail.com`,
     },
     {
       img: instagramIcon,

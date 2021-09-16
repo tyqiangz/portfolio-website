@@ -7,7 +7,7 @@ const Skills = () => {
       <div className="container">
         <div className="skills-container">
           <h1>Skills</h1>
-          <div className="skills-grid" style={{border: "1px solid black"}}>
+          <div className="skills-grid">
             {data.skills.map((skill, index) => (
               <div className="skill" key={index}>
                 <img src={skill.img} alt="css"></img>
