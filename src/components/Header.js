@@ -39,6 +39,16 @@ const Header = () => {
           <Fade bottom>
             <p>{data.headerParagraph}</p>
           </Fade>
+          <form onSubmit={populateAnswer}>
+            <input
+              className="qa-input"
+              autocomplete="off"
+              type="text"
+              onSubmit={populateAnswer}
+              placeholder="What is his current job?"
+            />
+          </form>
+          <p className="qa-output"></p>
           <Fade bottom>
             <a
               href={
@@ -57,6 +67,13 @@ const Header = () => {
       </div>
     </div>
   );
+};
+
+const populateAnswer = () => {
+  var question = document.getElementsByClassName("qa-input")[0].value;
+  var answer = document.getElementsByClassName("qa-output")[0].value;
+  answer = question;
+  return false;
 };
 
 export default Header;
