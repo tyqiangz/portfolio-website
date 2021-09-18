@@ -114,7 +114,7 @@ const mydata = {
   // End Work Section -----------------------
 
   // About Secton --------------
-  resumeLink: "https://www.overleaf.com/project/5faf5e6fe956f46d635f8eb4",
+  resumeLink: "https://www.overleaf.com/read/fpwyxyhyddsc",
   profilePicture: profilePic,
 
   aboutParaOne: "I'm Tay Yong Qiang, a data scientist working in Singapore.",
