@@ -53,33 +53,4 @@
       width: 100%;
     }
   }
-  form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 2em;
-
-    @include media(">=phone", "<lgphone") {
-      font-size: 12px;
-      width: 80%;
-    }
-    @include media(">=lgphone", "<tablet") {
-      font-size: 12px;
-      width: 100%;
-    }
-    @include media(">=tablet", "<desktop") {
-      font-size: 14px;
-      width: 100%;
-    }
-
-    .qa-input {
-      width: 80%;
-      height: 100%;
-      padding: 1em;
-    }
-  }
-  .qa-output {
-    padding: 1em;
-  }
 }

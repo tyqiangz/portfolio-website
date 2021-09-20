@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 const Card = ({ heading, paragraph, imgUrl, projectLink }) => {
   return (
@@ -24,7 +24,7 @@ const Card = ({ heading, paragraph, imgUrl, projectLink }) => {
         </a>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Card
+export default Card;

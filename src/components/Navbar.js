@@ -1,5 +1,5 @@
-import React from "react"
-import scrollTo from "gatsby-plugin-smoothscroll"
+import React from "react";
+import scrollTo from "gatsby-plugin-smoothscroll";
 const Navbar = () => {
   return (
     <div className="section">
@@ -21,7 +21,7 @@ const Navbar = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

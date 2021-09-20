@@ -26,11 +26,11 @@ const mydata = {
   name: "Yong Qiang",
   headerTagline: [
     //Line 1 For Header
-    "Building digital",
+    "I use data science",
     //Line 2 For Header
-    "products, brands,",
+    "and analytics to",
     //Line 3 For Header
-    "and experience",
+    "transform businesses",
   ],
   //   Header Paragraph
   headerParagraph: "Ask my AI-powered personal assistant any questions!",
