@@ -117,7 +117,8 @@ const mydata = {
   resumeLink: "https://www.overleaf.com/read/fpwyxyhyddsc",
   profilePicture: profilePic,
 
-  aboutParaOne: "I'm Tay Yong Qiang, a data scientist working in Singapore.",
+  aboutParaOne:
+    "I'm Tay Yong Qiang, currently a data scientist working in Singapore.",
   aboutParaTwo:
     "I analyse huge volumes of data and build machine learning models to empower businesses at scale.",
   aboutParaThree:

@@ -6,14 +6,15 @@ const QuestionAnswer = () => {
   const [question, updateQuestion] = useState("");
   const [answer, updateAnswer] = useState("");
 
-  useEffect(() => {
-    requestAnswer();
-  }, [question]); // eslint-disable-line react-hooks/exhaustive-deps
+  // useEffect(() => {
+  //   requestAnswer();
+  // }, [question]); // eslint-disable-line react-hooks/exhaustive-deps
 
   async function requestAnswer() {
     document.getElementsByClassName("qa-output")[0].style.display = "none";
     document.getElementsByClassName("loading-bar")[0].style.display = "flex";
     console.log(question);
+
     const response = await fetch(
       `https://thawing-chamber-34850.herokuapp.com/?question=${question}`
     );
@@ -23,12 +24,41 @@ const QuestionAnswer = () => {
     document.getElementsByClassName("loading-bar")[0].style.display = "none";
     document.getElementsByClassName("qa-output")[0].style.display = "block";
     document.getElementsByClassName("qa-output")[0].innerHTML = answer;
+
+    // fetch(`https://thawing-chamber-34850.herokuapp.com/?question=${question}`)
+    //   .then((response) => updateAnswer(response.json().answer))
+    //   .then(() => {
+    //     document.getElementsByClassName("loading-bar")[0].style.display =
+    //       "none";
+    //     document.getElementsByClassName("qa-output")[0].style.display = "block";
+    //     document.getElementsByClassName("qa-output")[0].innerHTML = answer;
+    //   });
+
     console.log(answer);
   }
 
-  const onSubmitQuestion = (e) => {
-    updateQuestion(e.target.value);
+  const onSubmitQuestion = async (e) => {
+    console.log(
+      "Console: " + document.getElementsByClassName("qa-input")[0].value
+    );
     e.preventDefault();
+    updateQuestion(document.getElementsByClassName("qa-input")[0].value);
+
+    document.getElementsByClassName("qa-output")[0].style.display = "none";
+    document.getElementsByClassName("loading-bar")[0].style.display = "flex";
+    console.log("Q: " + question);
+
+    const response = await fetch(
+      `https://thawing-chamber-34850.herokuapp.com/?question=${question}`
+    );
+    const json = await response.json();
+    updateAnswer(json.answer);
+
+    document.getElementsByClassName("loading-bar")[0].style.display = "none";
+    document.getElementsByClassName("qa-output")[0].style.display = "block";
+    document.getElementsByClassName("qa-output")[0].innerHTML = answer;
+
+    console.log("A: " + `${answer} Q: ${json.question}`);
   };
 
   return (
