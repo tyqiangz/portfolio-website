@@ -7,33 +7,49 @@ const QuestionAnswer = () => {
   const [answer, updateAnswer] = useState("");
 
   useEffect(() => {
+    startedLoading();
     requestAnswer();
+    finishedLoading();
   }, [question]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  async function requestAnswer() {
-    document.getElementsByClassName("qa-output")[0].style.display = "none";
-    document.getElementsByClassName("loading-bar")[0].style.display = "flex";
-    console.log(question);
+  // useEffect(() => {
+  //   finishedLoading();
+  // }, [answer]);
 
-    if (question === "") {
+  function startedLoading() {
+    // hide the previous answer
+    document.getElementsByClassName("qa-output")[0].style.display = "none";
+    // display the loading icon
+    document.getElementsByClassName("loading-bar")[0].style.display = "flex";
+  }
+
+  function finishedLoading() {
+    // hide the loading icon
+    document.getElementsByClassName("loading-bar")[0].style.display = "none";
+    document.getElementsByClassName("qa-output")[0].style.display = "block";
+    document.getElementsByClassName("qa-output")[0].innerHTML = answer;
+  }
+
+  async function requestAnswer() {
+    console.log("Q: " + question);
+    console.log(question === "" || question === undefined);
+
+    // if there is no question, give a blank answer
+    if (question === "" || question === undefined) {
+      updateAnswer("");
+    } else {
       const response = await fetch(
         `https://thawing-chamber-34850.herokuapp.com/?question=${question}`
       );
       const json = await response.json();
       updateAnswer(json.answer);
-    } else {
-      updateAnswer("");
+      console.log(answer);
     }
 
-    document.getElementsByClassName("loading-bar")[0].style.display = "none";
-    document.getElementsByClassName("qa-output")[0].style.display = "block";
-    document.getElementsByClassName("qa-output")[0].innerHTML =
-      "Answer: " + answer;
-
-    console.log(answer);
+    console.log("A: " + answer);
   }
 
-  const onSubmitQuestion = async (e) => {
+  const onSubmitQuestion = (e) => {
     e.preventDefault();
     updateQuestion(document.getElementsByClassName("qa-input")[0].value);
   };
